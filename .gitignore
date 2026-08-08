@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+.venv-1/
+*.wav
+.env
+.env.*
+*.log
+tmp/
+groq-response.txt

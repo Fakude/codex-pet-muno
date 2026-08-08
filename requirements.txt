@@ -1,0 +1,8 @@
+PyQt6>=6.6
+openai>=1.30
+requests>=2.31
+numpy>=1.26
+sounddevice>=0.4
+Pillow>=10.0
+pyautogui>=0.9
+PyGetWindow>=0.0.9
