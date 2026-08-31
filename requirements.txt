@@ -6,3 +6,9 @@ sounddevice>=0.4
 Pillow>=10.0
 pyautogui>=0.9
 PyGetWindow>=0.0.9
+# Speech output through the Windows speech engine (SAPI). Local, so no key,
+# no network, and no length limit on narration.
+pywin32==311
+# Browser control over the Chrome DevTools Protocol. Muno attaches to your
+# installed Chrome, so `playwright install` is not required.
+playwright==1.56.0

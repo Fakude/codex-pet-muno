@@ -6,6 +6,14 @@ __pycache__/
 *.wav
 .env
 .env.*
+# The template carries only placeholders and documents every setting, so it is
+# the one .env file that belongs in the repository.
+!.env.example
 *.log
 tmp/
 groq-response.txt
+
+# Scratch files from diagnostic runs.
+_*.py
+startup_log.txt
+_bundle.js
