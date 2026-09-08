@@ -2,6 +2,36 @@
 
 Muno is a floating Windows desktop companion with chat, voice, screen analysis, personalities, and optional desktop automation.
 
+## Latest Features
+
+**Voice & Interaction**
+- Real-time voice streaming with adaptive noise detection and pre-roll buffering
+- Interrupt Muno mid-sentence by speaking — it stops and listens immediately
+- Live transcription shows exactly what was heard and when listening stopped
+- Microphone level meter provides visual feedback as you speak
+
+**Screen Watching & Control**
+- Pick a screen region once and repeat tasks over it automatically
+- Type into selected fields from voice or generate contextual content
+- Watch for specific information, decode data, or monitor for security issues
+- Video watching capabilities for selected screen areas
+
+**Self-Extension**
+- Muno identifies capability gaps and researches solutions from vetted sources
+- Searches PyPI and GitHub with trust scoring (age, releases, stars, license)
+- Detects typosquats and abandoned packages automatically
+- All installs are approval-gated, pinned, and isolated to `~/.codex_pet/extensions/`
+
+**Mobile & Multi-Device**
+- Token-paired PWA for phones and tablets (iOS, Android)
+- Works as a home screen app with no installation required
+- PC does the work; mobile provides remote control and approval
+
+**Personality & Design**
+- Choose between multiple pet characters with unique appearances
+- Apple-inspired design tokens across PWA and Qt window
+- Smooth, interactive animations that respond to drag speed and direction
+
 ## Start
 
 1. Create a virtual environment and install dependencies: `python -m pip install -r requirements.txt`
@@ -17,6 +47,8 @@ Ask in plain language. Muno picks the right action itself.
 - **Browse** — "open youtube.com", "search the web for tide tables", "find lo-fi beats on YouTube".
 - **Watch things** — "play lo-fi beats", "play the third result". Muno reads the real YouTube result list and picks by position.
 - **Use web pages** — "what does this page say?", "list the links", "click Sign in", "search this page for X".
+- **Watch a region** — "watch this part of the screen". Pick a region once, then Muno can repeat tasks over it: looking for changes, typing into fields, reading data, or watching for security warnings. Works with videos too.
+- **Type where you point** — select a text field on screen and Muno can type into it from what you say, or generate appropriate content for that field based on context.
 - **WhatsApp** — "tell Sarah I'm running late". Muno opens the chat with the message typed in; you press Enter to send. Say "send it" and Muno delivers it through WhatsApp Web.
 - **Contacts** — "save Sarah's number as +1 555 123 4567", "who are my contacts?"
 - **GitHub** — "create a repo called my cool project", "upload MUNO.pdf to my pet repo",
@@ -27,6 +59,7 @@ Ask in plain language. Muno picks the right action itself.
 - **Read mail** — "any unread email?"
 - **Activity** — "what am I doing?", "what apps are open?", "how have I spent the last hour?"
 - **Screen** — use **Snap** to attach the current screen to your next question.
+- **Voice control** — speak to Muno and interrupt mid-sentence when it's talking. Live transcription shows exactly what was heard.
 
 Web actions work on the page's real structure (links, buttons, text) rather than
 guessing where to click, so they do not depend on window position, DPI scaling,
@@ -190,6 +223,7 @@ and it settles back to idling.
 - **Drag** to move. Muno stays inside the screen it is on.
 - **Double click** to send it back to its corner.
 - Where you leave it is remembered, so it returns there next launch.
+- The animations are smooth and interactive, responding to drag speed and direction in real time.
 
 Sprite pets have separate left and right run cycles drawn by their artist, and
 Muno uses the real ones rather than mirroring a single direction. If an atlas
@@ -207,7 +241,8 @@ Muno's own body is drawn in code, but it can wear any of the pixel pets shared a
 menu, or **Appearance** in Settings.
 
 Pick one and it downloads, then animates in place of the built-in look. Nothing
-about Muno's abilities changes; only the body does.
+about Muno's abilities changes; only the body does. The UI follows Apple design
+principles with refined spacing, typography, and color choices for a premium feel.
 
 Each pet is one WebP atlas of 192x208 cells, a row per animation and a column per
 frame. Muno's states are mapped onto the animations the artist provided:
