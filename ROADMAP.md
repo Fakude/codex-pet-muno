@@ -1,5 +1,20 @@
 # Codex Pet - Development Roadmap
 
+> **Current delivery status (October 2026):** Muno has progressed beyond the original Phase 1 plan below. The historical sections are retained for context; the table below is the authoritative portfolio status.
+
+## Current status
+
+| Capability | Status | Evidence |
+| --- | --- | --- |
+| Windows desktop companion and settings | Implemented | `pet.py`, `pets.py`, `pet_picker.py` |
+| Voice interaction and local Windows narration | Implemented | `voice.py`, `voice_stream.py` |
+| Browser, GitHub and email integrations | Implemented with approval gates | `browser.py`, `github_api.py`, `email_api.py` |
+| Local file index, journal and activity history | Implemented | `file_index.py`, `journal.py`, `activity_log.py` |
+| Token-paired local-network phone companion | Implemented; opt-in | `mobile_server.py` |
+| Automated Windows unit-test CI | Implemented | `.github/workflows/ci.yml` |
+| Broader integration/security test coverage | In progress | Add tests per integration boundary |
+| Public cloud sync, internet-hosted control plane, native mobile app | Planned, not implemented | Future work |
+
 ## Vision
 A futuristic, multi-purpose digital companion that adapts to any task and works across all devices with seamless integration to applications.
 

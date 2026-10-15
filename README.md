@@ -1,6 +1,45 @@
 # Muno
 
+[![Windows CI](https://github.com/Fakude/codex-pet-muno/actions/workflows/ci.yml/badge.svg)](https://github.com/Fakude/codex-pet-muno/actions/workflows/ci.yml)
+
 Muno is a floating Windows desktop companion with chat, voice, screen analysis, personalities, and optional desktop automation.
+
+> **Platform:** Windows 10/11 &nbsp;|&nbsp; **Interface:** PyQt6 &nbsp;|&nbsp; **Model provider:** Groq-compatible OpenAI API
+
+## Why Muno
+
+Muno explores what a local-first desktop companion looks like when powerful actions remain human-controlled. It combines a visual desktop pet with voice input, local activity awareness, browser and GitHub tools, file discovery and an optional phone companion. Operations that can send, publish, alter files or control the desktop are designed to request approval before execution.
+
+## Quick start
+
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+$env:GROQ_API_KEY = "your-key"
+python pet.py
+```
+
+Copy `.env.example` into your Windows user environment when you want optional GitHub, email, voice or mobile features. Do not commit credentials.
+
+## Portfolio evidence
+
+- Automated Windows checks run on every push and pull request.
+- [Architecture](docs/architecture.md) explains the local components and trust boundaries.
+- [Security model](SECURITY.md) documents permissions, data storage, threat assumptions and reporting.
+- [Roadmap](ROADMAP.md) clearly separates implemented functionality from planned work.
+
+## What is implemented vs planned
+
+| Area | Current status |
+| --- | --- |
+| Desktop companion, personalities and local configuration | Implemented |
+| Voice input/output and live transcription feedback | Implemented on Windows |
+| Browser, GitHub, email and file-index integrations | Implemented with user approvals and configured credentials/sessions |
+| Activity journal and duplicate-action prompts | Implemented |
+| Phone companion on the local network | Implemented; opt-in and token paired |
+| Public internet access, cloud sync and native mobile app | Not implemented; deliberately out of scope for the current local-first release |
+| Automated security testing and broad integration-test coverage | In progress |
 
 ## Latest Features
 
